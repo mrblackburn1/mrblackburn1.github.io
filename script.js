@@ -19,7 +19,7 @@ function showQuestions(topic, subtopic) {
 
     // Retrieve the questions for the topic and subtopic
     let selectedQuestions = questions[topic] && questions[topic][subtopic] ? questions[topic][subtopic] : [];
-    
+
     // Apply the command word filter if one is selected
     const commandFilter = document.getElementById('commandFilter').value;
     if (commandFilter && commandFilter !== "All") {
@@ -64,5 +64,5 @@ function showQuestions(topic, subtopic) {
 // Function to filter questions by command word
 function filterByCommandWord() {
     // Re-run the showQuestions function to apply the filter
-    showQuestions(currentTopic, currentSubtopic);  // Re-display the current topic/subtopic
+    showQuestions(currentTopic, currentSubtopic);  // Re-display the current topic/subtopic with applied filter
 }
