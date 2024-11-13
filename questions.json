@@ -1,0 +1,44 @@
+{
+    "programming": {
+        "functions": [
+            {
+                "question": "Write a Python function to reverse a string.",
+                "markScheme": "Use slicing or a loop.",
+                "commandWord": "Write",
+                "marks": 4
+            },
+            {
+                "question": "Explain the use of recursion in functions.",
+                "markScheme": "Recursion calls a function within itself.",
+                "commandWord": "Explain",
+                "marks": 6
+            }
+        ],
+        "loops": [
+            {
+                "question": "Explain the difference between a for loop and a while loop.",
+                "markScheme": "A for loop iterates a set number of times; a while loop continues until a condition is met.",
+                "commandWord": "Explain",
+                "marks": 5
+            }
+        ]
+    },
+    "data_structures": {
+        "linked_lists": [
+            {
+                "question": "Describe the structure of a singly linked list.",
+                "markScheme": "A singly linked list contains nodes with data and a reference to the next node.",
+                "commandWord": "Describe",
+                "marks": 5
+            }
+        ],
+        "trees": [
+            {
+                "question": "What is a binary tree and its use?",
+                "markScheme": "A binary tree has nodes with up to two children. It's used in searching and sorting data.",
+                "commandWord": "What",
+                "marks": 3
+            }
+        ]
+    }
+}
