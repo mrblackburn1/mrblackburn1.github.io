@@ -54,7 +54,7 @@
             {
                 "question": "State two methods of protecting intellectual property.",
                 "markScheme": "Any two from: <ul><li>Copyright</li><li>Patents</><li>Trademarks</li><li>Licensing</li><li>Non-disclosure agreement</li><li>Limit access to sensitive information</li><li>Awareness training for employees</li></ul>",
-                "commandWord": "State",
+                "commandWord": "Give/State/Name",
                 "marks": 2
             }
         ],
