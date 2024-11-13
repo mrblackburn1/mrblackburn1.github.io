@@ -1,4 +1,5 @@
 let questions = {};
+let filteredQuestions = [];
 
 // Fetch the questions from the JSON file
 fetch('questions.json')
@@ -8,12 +9,23 @@ fetch('questions.json')
     })
     .catch(error => console.error('Error loading questions:', error));
 
+// Function to show questions for the selected topic and subtopic
 function showQuestions(topic, subtopic) {
     const questionsContainer = document.getElementById("questions");
     questionsContainer.innerHTML = "";  // Clear previous questions
 
-    if (questions[topic] && questions[topic][subtopic]) {
-        questions[topic][subtopic].forEach(q => {
+    // Retrieve the questions for the topic and subtopic
+    let selectedQuestions = questions[topic] && questions[topic][subtopic] ? questions[topic][subtopic] : [];
+    
+    // If there is a filter, apply it to the selected questions
+    const commandFilter = document.getElementById('commandFilter').value;
+    if (commandFilter) {
+        selectedQuestions = selectedQuestions.filter(q => q.commandWord === commandFilter);
+    }
+
+    // Display the questions
+    if (selectedQuestions.length > 0) {
+        selectedQuestions.forEach(q => {
             const questionDiv = document.createElement("div");
             questionDiv.classList.add("question-item", "p-3", "mb-3", "border", "rounded", "bg-light");
 
@@ -44,4 +56,11 @@ function showQuestions(topic, subtopic) {
     } else {
         questionsContainer.textContent = "No questions available for this subtopic.";
     }
+}
+
+// Function to filter questions by command word
+function filterByCommandWord() {
+    const commandFilter = document.getElementById('commandFilter').value;
+    // Re-run the showQuestions function to apply the filter
+    showQuestions("programming", "functions");  // You may need to save the last selected topic/subtopic to persist the filter
 }
