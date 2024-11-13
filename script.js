@@ -1,5 +1,6 @@
 let questions = {};
-let filteredQuestions = [];
+let currentTopic = null;
+let currentSubtopic = null;
 
 // Fetch the questions from the JSON file
 fetch('questions.json')
@@ -11,15 +12,17 @@ fetch('questions.json')
 
 // Function to show questions for the selected topic and subtopic
 function showQuestions(topic, subtopic) {
+    currentTopic = topic;
+    currentSubtopic = subtopic;
     const questionsContainer = document.getElementById("questions");
     questionsContainer.innerHTML = "";  // Clear previous questions
 
     // Retrieve the questions for the topic and subtopic
     let selectedQuestions = questions[topic] && questions[topic][subtopic] ? questions[topic][subtopic] : [];
     
-    // If there is a filter, apply it to the selected questions
+    // Apply the command word filter if one is selected
     const commandFilter = document.getElementById('commandFilter').value;
-    if (commandFilter) {
+    if (commandFilter && commandFilter !== "All") {
         selectedQuestions = selectedQuestions.filter(q => q.commandWord === commandFilter);
     }
 
@@ -60,7 +63,6 @@ function showQuestions(topic, subtopic) {
 
 // Function to filter questions by command word
 function filterByCommandWord() {
-    const commandFilter = document.getElementById('commandFilter').value;
     // Re-run the showQuestions function to apply the filter
-    showQuestions("programming", "functions");  // You may need to save the last selected topic/subtopic to persist the filter
+    showQuestions(currentTopic, currentSubtopic);  // Re-display the current topic/subtopic
 }
