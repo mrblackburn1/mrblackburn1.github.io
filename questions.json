@@ -1,10 +1,10 @@
 {
-    "programming": {
-        "functions": [
+    "topic1": {
+        "1.1": [
             {
-                "question": "Write a Python function to reverse a string.",
+                "question": "Describe a Python function to reverse a string.",
                 "markScheme": "Use slicing or a loop.",
-                "commandWord": "Write",
+                "commandWord": "Describe",
                 "marks": 4
             },
             {
@@ -14,17 +14,25 @@
                 "marks": 6
             }
         ],
-        "loops": [
+        "1.2": [
             {
                 "question": "Explain the difference between a for loop and a while loop.",
                 "markScheme": "A for loop iterates a set number of times; a while loop continues until a condition is met.",
                 "commandWord": "Explain",
                 "marks": 5
             }
+        ],
+        "1.3": [
+            {
+                "question": "Explain the difference between a OR and AND gate",
+                "markScheme": "A for loop iterates a set number of times; a while loop continues until a condition is met.",
+                "commandWord": "Explain",
+                "marks": 2
+            }
         ]
     },
-    "data_structures": {
-        "linked_lists": [
+    "topic2": {
+        "2.1": [
             {
                 "question": "Describe the structure of a singly linked list.",
                 "markScheme": "A singly linked list contains nodes with data and a reference to the next node.",
@@ -32,7 +40,7 @@
                 "marks": 5
             }
         ],
-        "trees": [
+        "2.2": [
             {
                 "question": "What is a binary tree and its use?",
                 "markScheme": "A binary tree has nodes with up to two children. It's used in searching and sorting data.",
