@@ -39,7 +39,7 @@ function showQuestions(topic, subtopic) {
 
             // Command word and Marks
             const detailsText = document.createElement("p");
-            detailsText.innerHTML = `<strong>Command Word:</strong> ${q.commandWord} | <strong>Marks:</strong> ${q.marks}`;
+            detailsText.innerHTML = `<strong>Command Word:</strong> ${q.commandWord}<br><strong>Marks:</strong> ${q.marks}`;
             questionDiv.appendChild(detailsText);
 
             // Show Mark Scheme button
@@ -48,7 +48,7 @@ function showQuestions(topic, subtopic) {
             revealButton.textContent = "Show Mark Scheme";
             revealButton.onclick = () => {
                 const markSchemeText = document.createElement("p");
-                markSchemeText.innerHTML = `<strong>Mark Scheme:</strong> ${q.markScheme}`;
+                markSchemeText.innerHTML = `<strong>Mark Scheme:</strong><br> ${q.markScheme}`;
                 questionDiv.appendChild(markSchemeText);
                 revealButton.remove();
             };

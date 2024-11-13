@@ -7,3 +7,7 @@
 .question-item p {
     margin-bottom: 10px;
 }
+
+.navbar-toggler-icon {
+    background-color: white;
+}

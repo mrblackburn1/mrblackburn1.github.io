@@ -12,105 +12,113 @@
     <div class="container-fluid">
         <div class="row">
             <!-- Sidebar with Topics and Subtopics -->
-            <nav class="col-md-5 col-lg-4 d-md-block bg-dark sidebar">
-                <div class="accordion" id="topicsAccordion">
-                    <h2 class="text-light text-center pt-4">Topics</h2>
-                    
-                    <!-- Topic 1 - Computational Thinking-->
-                    <div class="card bg-dark">
-                        <div class="card-header">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link text-light" data-toggle="collapse" data-target="#topic1Subtopics" aria-expanded="true">
-                                    <i class="bi bi-puzzle-fill"></i>Topic 1 - Computational Thinking
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="topic1Subtopics" class="collapse" data-parent="#topicsAccordion">
-                            <div class="card-body bg-secondary">
-                                <ul class="list-unstyled">
-                                    <li><a href="#" class="text-light" onclick="showQuestions('topic1', '1.1')">1.1 Decomposition and abstraction</a></li>
-                                    <li><a href="#" class="text-light" onclick="showQuestions('topic1', '1.2')">1.2 Algorithms</a></li>
-                                    <li><a href="#" class="text-light" onclick="showQuestions('topic1', '1.3')">1.3 Truth Tables</a></li>
-                                </ul>
+            <nav class="col-md-4 col-lg-3 d-md-block bg-dark sidebar navbar navbar-expand-md">
+                <!-- Burger icon for small screens -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Collapsible sidebar menu -->
+                <div class="collapse navbar-collapse" id="sidebarMenu">
+                    <div class="accordion" id="topicsAccordion">
+                        <h2 class="text-light text-center pt-4">Topics</h2>
+                        
+                        <!-- Topic 1 - Computational Thinking-->
+                        <div class="card bg-dark">
+                            <div class="card-header">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link text-light" data-toggle="collapse" data-target="#topic1Subtopics" aria-expanded="true">
+                                        <i class="bi bi-puzzle-fill"></i>Topic 1 - Computational Thinking
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="topic1Subtopics" class="collapse" data-parent="#topicsAccordion">
+                                <div class="card-body bg-secondary">
+                                    <ul class="list-unstyled">
+                                        <li><a href="#" class="text-light" onclick="showQuestions('topic1', '1.1')">1.1 Decomposition and abstraction</a></li>
+                                        <li><a href="#" class="text-light" onclick="showQuestions('topic1', '1.2')">1.2 Algorithms</a></li>
+                                        <li><a href="#" class="text-light" onclick="showQuestions('topic1', '1.3')">1.3 Truth Tables</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Topic 2 - Data-->
-                    <div class="card bg-dark">
-                        <div class="card-header">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link text-light" data-toggle="collapse" data-target="#topic2Subtopics" aria-expanded="false">
-                                    <i class="bi bi-file-binary-fill"></i>Topic 2 - Data
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="topic2Subtopics" class="collapse" data-parent="#topicsAccordion">
-                            <div class="card-body bg-secondary">
-                                <ul class="list-unstyled">
-                                    <li><a href="#" class="text-light" onclick="showQuestions('topic2', '2.1')">2.1 Binary</a></li>
-                                    <li><a href="#" class="text-light" onclick="showQuestions('topic2', '2.2')">2.2 Data representation</a></li>
-                                    <li><a href="#" class="text-light" onclick="showQuestions('topic2', '2.3')">2.3 Data storage and compression</a></li>
-                                </ul>
+                        <!-- Topic 2 - Data-->
+                        <div class="card bg-dark">
+                            <div class="card-header">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link text-light" data-toggle="collapse" data-target="#topic2Subtopics" aria-expanded="false">
+                                        <i class="bi bi-file-binary-fill"></i>Topic 2 - Data
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="topic2Subtopics" class="collapse" data-parent="#topicsAccordion">
+                                <div class="card-body bg-secondary">
+                                    <ul class="list-unstyled">
+                                        <li><a href="#" class="text-light" onclick="showQuestions('topic2', '2.1')">2.1 Binary</a></li>
+                                        <li><a href="#" class="text-light" onclick="showQuestions('topic2', '2.2')">2.2 Data representation</a></li>
+                                        <li><a href="#" class="text-light" onclick="showQuestions('topic2', '2.3')">2.3 Data storage and compression</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Topic 3 - Computers-->
-                    <div class="card bg-dark">
-                        <div class="card-header">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link text-light" data-toggle="collapse" data-target="#topic3Subtopics" aria-expanded="false">
-                                    <i class="bi bi-cpu-fill"></i>Topic 3 - Computers
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="topic3Subtopics" class="collapse" data-parent="#topicsAccordion">
-                            <div class="card-body bg-secondary">
-                                <ul class="list-unstyled">
-                                    <li><a href="#" class="text-light" onclick="showQuestions('topic3', '3.1')">3.1 Hardware</a></li>
-                                    <li><a href="#" class="text-light" onclick="showQuestions('topic3', '3.2')">3.2 Software</a></li>
-                                    <li><a href="#" class="text-light" onclick="showQuestions('topic3', '3.3')">3.3 Programming languages</a></li>
-                                </ul>
+                        <!-- Topic 3 - Computers-->
+                        <div class="card bg-dark">
+                            <div class="card-header">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link text-light" data-toggle="collapse" data-target="#topic3Subtopics" aria-expanded="false">
+                                        <i class="bi bi-cpu-fill"></i>Topic 3 - Computers
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="topic3Subtopics" class="collapse" data-parent="#topicsAccordion">
+                                <div class="card-body bg-secondary">
+                                    <ul class="list-unstyled">
+                                        <li><a href="#" class="text-light" onclick="showQuestions('topic3', '3.1')">3.1 Hardware</a></li>
+                                        <li><a href="#" class="text-light" onclick="showQuestions('topic3', '3.2')">3.2 Software</a></li>
+                                        <li><a href="#" class="text-light" onclick="showQuestions('topic3', '3.3')">3.3 Programming languages</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Topic 4 - Computers-->
-                    <div class="card bg-dark">
-                        <div class="card-header">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link text-light" data-toggle="collapse" data-target="#topic4Subtopics" aria-expanded="false">
-                                    <i class="bi bi-router-fill"></i>Topic 4 - Networks
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="topic4Subtopics" class="collapse" data-parent="#topicsAccordion">
-                            <div class="card-body bg-secondary">
-                                <ul class="list-unstyled">
-                                    <li><a href="#" class="text-light" onclick="showQuestions('topic4', '4.1')">4.1 Networks</a></li>
-                                    <li><a href="#" class="text-light" onclick="showQuestions('topic4', '4.2')">4.2 Network security</a></li>
-                                </ul>
+                        <!-- Topic 4 - Computers-->
+                        <div class="card bg-dark">
+                            <div class="card-header">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link text-light" data-toggle="collapse" data-target="#topic4Subtopics" aria-expanded="false">
+                                        <i class="bi bi-router-fill"></i>Topic 4 - Networks
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="topic4Subtopics" class="collapse" data-parent="#topicsAccordion">
+                                <div class="card-body bg-secondary">
+                                    <ul class="list-unstyled">
+                                        <li><a href="#" class="text-light" onclick="showQuestions('topic4', '4.1')">4.1 Networks</a></li>
+                                        <li><a href="#" class="text-light" onclick="showQuestions('topic4', '4.2')">4.2 Network security</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Topic 5 - Issues and Impacts-->
-                    <div class="card bg-dark">
-                        <div class="card-header">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link text-light" data-toggle="collapse" data-target="#topic5Subtopics" aria-expanded="false">
-                                    <i class="bi bi-shield-fill-check"></i>Topic 5 - Issues and Impacts
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="topic5Subtopics" class="collapse" data-parent="#topicsAccordion">
-                            <div class="card-body bg-secondary">
-                                <ul class="list-unstyled">
-                                    <li><a href="#" class="text-light" onclick="showQuestions('topic5', '5.1')">5.1 Environmental</a></li>
-                                    <li><a href="#" class="text-light" onclick="showQuestions('topic5', '5.2')">5.2 Ethical and legal</a></li>
-                                    <li><a href="#" class="text-light" onclick="showQuestions('topic5', '5.3')">5.3 Cybersecurity</a></li>
-                                </ul>
+                        <!-- Topic 5 - Issues and Impacts-->
+                        <div class="card bg-dark">
+                            <div class="card-header">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link text-light" data-toggle="collapse" data-target="#topic5Subtopics" aria-expanded="false">
+                                        <i class="bi bi-shield-fill-check"></i>Topic 5 - Issues and Impacts
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="topic5Subtopics" class="collapse" data-parent="#topicsAccordion">
+                                <div class="card-body bg-secondary">
+                                    <ul class="list-unstyled">
+                                        <li><a href="#" class="text-light" onclick="showQuestions('topic5', '5.1')">5.1 Environmental</a></li>
+                                        <li><a href="#" class="text-light" onclick="showQuestions('topic5', '5.2')">5.2 Ethical and legal</a></li>
+                                        <li><a href="#" class="text-light" onclick="showQuestions('topic5', '5.3')">5.3 Cybersecurity</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
