@@ -48,5 +48,23 @@
                 "marks": 3
             }
         ]
+    },
+    "topic5": {
+        "2.1": [
+            {
+                "question": "State two methods of protecting intellectual property.",
+                "markScheme": "Any two from: <ul><li>Copyright</li><li>Patents</><li>Trademarks</li><li>Licensing</li><li>Non-disclosure agreement</li><li>Limit access to sensitive information</li><li>Awareness training for employees</li></ul>",
+                "commandWord": "State",
+                "marks": 2
+            }
+        ],
+        "2.2": [
+            {
+                "question": "What is a binary tree and its use?",
+                "markScheme": "A binary tree has nodes with up to two children. It's used in searching and sorting data.",
+                "commandWord": "What",
+                "marks": 3
+            }
+        ]
     }
 }
