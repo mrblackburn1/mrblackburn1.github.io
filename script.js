@@ -1,22 +1,30 @@
 const questions = {
-    programming: [
-        { question: "Write a function to reverse a string in Python.", markScheme: "Use slicing or a loop." },
-        { question: "Explain the difference between a variable and a constant.", markScheme: "A variable changes, a constant does not." }
-    ],
-    data_structures: [
-        { question: "Describe a linked list and its advantages.", markScheme: "A linked list is a linear data structure..." }
-    ],
-    algorithms: [
-        { question: "Explain binary search and provide a code example.", markScheme: "Binary search divides the sorted array..." }
-    ]
+    programming: {
+        functions: [
+            { question: "Write a Python function to reverse a string.", markScheme: "Use slicing or a loop." },
+            { question: "Explain the use of recursion in functions.", markScheme: "Recursion calls a function within itself." }
+        ],
+        loops: [
+            { question: "Explain the difference between a for loop and a while loop.", markScheme: "A for loop iterates a set number of times; a while loop continues until a condition is met." }
+        ]
+    },
+    data_structures: {
+        linked_lists: [
+            { question: "Describe the structure of a singly linked list.", markScheme: "A singly linked list contains nodes with data and a reference to the next node." }
+        ],
+        trees: [
+            { question: "What is a binary tree and its use?", markScheme: "A binary tree has nodes with up to two children. It's used in searching and sorting data." }
+        ]
+    }
+    // Add more topics and subtopics as needed
 };
 
-function showTopic(topic) {
+function showQuestions(topic, subtopic) {
     const questionsContainer = document.getElementById("questions");
     questionsContainer.innerHTML = "";  // Clear previous questions
 
-    if (questions[topic]) {
-        questions[topic].forEach(q => {
+    if (questions[topic] && questions[topic][subtopic]) {
+        questions[topic][subtopic].forEach(q => {
             const questionDiv = document.createElement("div");
             questionDiv.classList.add("question-item");
 
@@ -38,6 +46,6 @@ function showTopic(topic) {
             questionsContainer.appendChild(questionDiv);
         });
     } else {
-        questionsContainer.textContent = "No questions available for this topic.";
+        questionsContainer.textContent = "No questions available for this subtopic.";
     }
 }

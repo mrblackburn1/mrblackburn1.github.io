@@ -10,28 +10,58 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <!-- Sidebar for Topics -->
+            <!-- Sidebar with Topics and Subtopics -->
             <nav class="col-md-3 col-lg-2 d-md-block bg-dark sidebar">
-                <div class="sidebar-sticky">
+                <div class="accordion" id="topicsAccordion">
                     <h2 class="text-light text-center pt-4">Topics</h2>
-                    <ul class="nav flex-column text-light">
-                        <li class="nav-item">
-                            <a class="nav-link text-light" href="#" onclick="showTopic('programming')">Programming</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" href="#" onclick="showTopic('data_structures')">Data Structures</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" href="#" onclick="showTopic('algorithms')">Algorithms</a>
-                        </li>
-                        <!-- Add more topics as needed -->
-                    </ul>
+                    
+                    <!-- Programming Topic -->
+                    <div class="card bg-dark">
+                        <div class="card-header">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link text-light" data-toggle="collapse" data-target="#programmingSubtopics" aria-expanded="true">
+                                    Programming
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="programmingSubtopics" class="collapse" data-parent="#topicsAccordion">
+                            <div class="card-body bg-secondary">
+                                <ul class="list-unstyled">
+                                    <li><a href="#" class="text-light" onclick="showQuestions('programming', 'functions')">Functions</a></li>
+                                    <li><a href="#" class="text-light" onclick="showQuestions('programming', 'loops')">Loops</a></li>
+                                    <!-- Add more subtopics as needed -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Data Structures Topic -->
+                    <div class="card bg-dark">
+                        <div class="card-header">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link text-light" data-toggle="collapse" data-target="#dataStructuresSubtopics" aria-expanded="false">
+                                    Data Structures
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="dataStructuresSubtopics" class="collapse" data-parent="#topicsAccordion">
+                            <div class="card-body bg-secondary">
+                                <ul class="list-unstyled">
+                                    <li><a href="#" class="text-light" onclick="showQuestions('data_structures', 'linked_lists')">Linked Lists</a></li>
+                                    <li><a href="#" class="text-light" onclick="showQuestions('data_structures', 'trees')">Trees</a></li>
+                                    <!-- Add more subtopics as needed -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add more topics similarly -->
                 </div>
             </nav>
 
             <!-- Main Content Area -->
             <main class="col-md-9 ml-sm-auto col-lg-10 px-md-4 pt-4">
-                <h1>Exam Question Bank 1</h1>
+                <h1>Exam Question Bank</h1>
                 <div id="questions" class="mt-4">
                     <!-- Questions will be dynamically inserted here -->
                 </div>
