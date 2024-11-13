@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Question Bank</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar for Topics -->
+            <nav class="col-md-3 col-lg-2 d-md-block bg-dark sidebar">
+                <div class="sidebar-sticky">
+                    <h2 class="text-light text-center pt-4">Topics</h2>
+                    <ul class="nav flex-column text-light">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#" onclick="showTopic('programming')">Programming</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#" onclick="showTopic('data_structures')">Data Structures</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#" onclick="showTopic('algorithms')">Algorithms</a>
+                        </li>
+                        <!-- Add more topics as needed -->
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Main Content Area -->
+            <main class="col-md-9 ml-sm-auto col-lg-10 px-md-4 pt-4">
+                <h1>Exam Question Bank</h1>
+                <div id="questions" class="mt-4">
+                    <!-- Questions will be dynamically inserted here -->
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- JavaScript for interactivity -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
