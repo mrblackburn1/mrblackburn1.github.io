@@ -8,10 +8,6 @@
     margin-bottom: 10px;
 }
 
-.navbar-toggler-icon {
-    background-color: white;
-}
-
 .accordian {
     flex-grow: 1;
     overflow-y: auto;
