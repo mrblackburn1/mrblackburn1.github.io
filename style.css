@@ -12,3 +12,7 @@
     flex-grow: 1;
     overflow-y: auto;
 }
+
+.custom-width {
+	width: 40%;
+}
