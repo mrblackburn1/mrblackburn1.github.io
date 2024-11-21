@@ -58,7 +58,7 @@
                 "marks": 2
             },
             {
-                "question": "Identify the ethical issue associated with the use of artificial intelligence. <ol type='A'><li>Acceptable use policies</li><li>B Algorithmic bias</li><li>Logic errors</li><li>Unpatched software</li></ol>",
+                "question": "Identify the ethical issue associated with the use of artificial intelligence. <ol type='A'><li>Acceptable use policies</li><li>Algorithmic bias</li><li>Logic errors</li><li>Unpatched software</li></ol>",
                 "markScheme": "B Algorithmic bias",
                 "commandWord": "Identify",
                 "marks": 1
