@@ -48,7 +48,6 @@ function showQuestions(topic, subtopic) {
             revealButton.textContent = "Show Mark Scheme";
             revealButton.onclick = () => {
                 const markSchemeText = document.createElement("p");
-				markSchemeText.style.background-color = 'light green';
                 markSchemeText.innerHTML = `<strong>Mark Scheme:</strong><br> ${q.markScheme}`;
                 questionDiv.appendChild(markSchemeText);
                 revealButton.remove();
